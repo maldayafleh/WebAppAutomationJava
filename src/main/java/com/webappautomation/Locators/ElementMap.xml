@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>         <!-- Id | ClassName | LinkText | CssSelector | XPath | Name | TagName -> Possible Locators-->
-<Elements>
-    <Element name="imageClick">
-        <By>CssSelector</By>
-        <Value>body > center > center > font > a > img</Value>
-    </Element>
-</Elements>
