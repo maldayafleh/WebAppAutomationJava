@@ -1,27 +1,28 @@
 package com.automation.tests;
 
 import com.webappautomation.DriverFactory;
-import com.webappautomation.pages.HomePage;
+import com.webappautomation.pages.LoginPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BasicTest
-{
+public class LoginTest {
     private WebDriver driver;
-    private HomePage homePage;
+    private LoginPage loginPage;
 
     @BeforeEach
     public void setup() {
         DriverFactory.initDriver();
         driver = DriverFactory.getDriver();
-        homePage = new HomePage(driver);
+        loginPage = new LoginPage(driver);
     }
 
     @Test
-    public void ClickFilterButton() {
-        homePage.ClickFilterButton();
+    public void logintoWebsite() {
+        loginPage.EnterUsername("standard_user");
+        loginPage.EnterPassword("secret_sauce");
+        loginPage.ClickLoginButton();
         try {
             Thread.sleep(3000); // wait 3 seconds to observe result
         } catch (InterruptedException e) {

@@ -1,5 +1,5 @@
 {
-  "appUrl": "http://automationpractice.com/index.php",
+  "appUrl": "https://www.saucedemo.com/",
   "browser": "edge",
   "implicitWait": 10,
   "screenshotPath": "Resources/Screenshots",
